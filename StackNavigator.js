@@ -136,6 +136,11 @@ function Navigation() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
+          name="Login"
+          component={LoginScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
           name="Main"
           component={BottomTabs}
           options={{ headerShown: false }}
@@ -156,8 +161,8 @@ function Navigation() {
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="Login"
-          component={LoginScreen}
+          name="Profile"
+          component={ProfileScreen}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
