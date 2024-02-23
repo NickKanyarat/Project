@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, SafeAreaView, Pressable } from "react-native";
 import React, { useEffect } from "react";
 import * as AppAuth from "expo-app-auth";
-import AsyncStorage from "@react-native-async-storage/async-storage";
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useNavigation } from "@react-navigation/native";
 
 const LoginScreen = () => {
@@ -10,7 +10,7 @@ const LoginScreen = () => {
     const checkTokenValidity = async () => {
       const accessToken = await AsyncStorage.getItem("token");
       const expirationDate = await AsyncStorage.getItem("expirationDate");
-      console.log("acess token", accessToken);
+      console.log("access token", accessToken);
       console.log("expiration date", expirationDate);
 
       if (accessToken && expirationDate) {
